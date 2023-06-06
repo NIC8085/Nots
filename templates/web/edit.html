@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nots</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="name">Nots<i class="bi bi-journal-text"></i></a>
+        <!--  <h1 class="link"><a>Stona główna</a></h1>  -->
+        <i class="bi bi-brightness-high"></i>
+    </nav>
+    <main>
+        <form action="add.html" method="post">
+            <div class="title_container">
+                <h1>Tytuł</h1>
+                <input type="text" name="title" id="" class="input title" maxlength="30" value="Title lorem ipsum, dolor sit.">
+            </div>
+            <div class="priority_container">
+                <h1>Ważność</h1>
+                <select name="priority" id="priority" class="priority">
+                    <option value="6">Priorytet</option>
+                    <option value="5">Bardzo ważne</option>
+                    <option value="4" selected="selected">Ważne</option>
+                    <option value="3">Średnio ważne</option>
+                    <option value="2">Mało ważne</option>
+                    <option value="1">Nieważne</option>
+                </select>
+            </div>
+            <div class="text_containter">
+                <h1>Zawartość</h1>
+                <textarea name="text" id="" cols="30" rows="10" class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio beatae recusandae molestias illum eaque fugit explicabo reiciendis hic doloribus incidunt. Consequatur laborum error debitis iste quam accusantium maiores aliquid voluptates. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, repellat nostrum explicabo iusto fugit officia sint dicta labore numquam est cumque iste quod ad illum commodi laboriosam ipsum at. Minima.lo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum repudiandae inventore et sed sapiente assumenda enim architecto consectetur libero nisi. Molestias hic tempora impedit totam placeat maxime. Suscipit, fuga delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo incidunt quidem vitae reprehenderit est sint, cum facere saepe doloribus! Blanditiis libero nulla tempora magnam unde, doloribus non mollitia iusto atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia cumque omnis id tempora voluptatem quos repellat dolore blanditiis, maxime hic officiis reprehenderit explicabo! Repellendus perferendis omnis quam provident saepe similique!</textarea>
+            </div>
+            <div class="add_container">
+                <input type="submit" value="Dodaj" class="input add">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

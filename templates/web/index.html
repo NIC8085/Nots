@@ -1,0 +1,31 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+{% block settings %}
+    <div class="settings">
+        <div class="add_note"><a href="add.html" >Dodaj notatkę</a></div>
+        <div class="priority">
+                PRIORYTET
+            <select name="priority" id="priority" class="wybor">
+                <option value="brak">Brak</option>
+                <option value="ascending">Rosnąco</option>
+                <option value="descending">Malejąco</option>
+            </select>
+        </div>
+    </div>
+{% endblock %}
+
+{% block note %}
+    {% for note in notes %}
+        <a href="details.html" class="note">
+            <div class="note">
+                <div class="note_name">{{ note.title }}</div>
+                <div class="note_text">{{ note.content }}</div>
+
+                <div class="note_priority" style="color: red;"></div>
+                <div class="note_date">{{ note.created }}</div>
+            </div>
+        </a>
+    {% endfor %}
+{% endblock %}
