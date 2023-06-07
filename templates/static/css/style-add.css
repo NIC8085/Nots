@@ -1,0 +1,118 @@
+*{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #181818;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+form{
+    margin: 0px 10%;
+    width: auto;
+    height: auto;
+}
+/**/
+nav{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #212121;
+    height: 5vh;
+}
+h1{
+    text-align: center;
+}
+nav>h1{
+    margin: auto 0px auto auto;
+}
+.link{
+    padding-bottom: 9px;
+    margin-top: 17px;
+}
+.name{
+    font-size: 50px;
+    margin: auto 0px auto 0px;
+    font-weight: bold;
+}
+.bi-journal-text{
+    font-size: 50px;
+    margin: auto auto auto 10px;
+    color: #ffbb00;
+}
+.bi-brightness-high{
+    font-size: 30px;
+    margin: 14px 0 0 auto;
+    transition: color 200ms;
+}
+.bi-brightness-high:hover{
+    color: #ffd500;
+    cursor: pointer;
+}
+.input{
+    background-color: #2b2b2b;
+    border: 1px solid #767676;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+}
+.title_container{
+    width: fit-content;
+    margin: 10% auto 0px auto;
+}
+.title{
+    height: 30px;
+    width: 300px;
+    font-size: large;
+}
+.options{
+    margin: 10px 0px;
+}
+.priority_container{
+    margin: 0px auto;
+    color: #9d9d9d;
+    width: fit-content;
+}
+.priority{
+    font-size: larger;
+    border-radius: 6px;
+    height: 10px;
+    background-color: #2e2e2e;
+    border: 0px;
+    height: auto;
+    padding: 3px;
+    width: auto;
+    border-radius: 6px;
+    transition: background-color 100ms;
+}
+.priority:hover{
+    background-color: #3d3d3d;
+}
+.text_containter{
+    width: 100%;
+}
+.text{
+    width: 100%;
+    height: 500px;
+    margin: 0px auto 0px auto;
+    background-color: #2e2e2e;
+    font-size: large;
+    border-radius: 5px;
+}
+.add_container{
+    margin: 10px auto;
+    width: fit-content;
+}
+.add{
+    font-size: 2em;
+    border: 0px;
+    padding: 10px 15px;
+    transition: background-color 100ms;
+}
+.add:hover{
+    background-color: #3d3d3d;
+}
+
+
+/*{}*/

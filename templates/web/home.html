@@ -18,6 +18,17 @@
     {% block settings %}{% endblock %}
     <main>
         {% block note %}{% endblock %}
+        {% for note in object_list %}
+            <a href="details.html" class="note">
+                <div class="note">
+                    <div class="note_name">{{ note.title }}</div>
+                    <div class="note_text">{{ note.content }}</div>
+
+                    <div class="note_priority" style="color: {{ note.priority.color }};">{{ note.priority.shortcut }}</div>
+                    <div class="note_date">{{ note.created }}</div>
+                </div>
+            </a>
+        {% endfor %}
     </main>
 </body>
 </html>

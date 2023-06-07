@@ -1,9 +1,12 @@
 from django.urls import path
-from . import views
-from .views import note_list
+#from . import views
+#from .views import note_list
+from .views import NoteView
+
 
 app_name = 'blog'
 urlpatterns = [
-    path('', note_list.as_view(), name='notes')
+    #path('', views.home, name='home')
+    path('', NoteView.as_view(), name='home')
 
 ]

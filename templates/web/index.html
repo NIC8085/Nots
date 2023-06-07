@@ -1,4 +1,4 @@
-{% extends "web/base.html" %}
+{% extends "web/home.html" %}
 {% load static %}
 
 
@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block note %}
-    {% for note in notes %}
+    {% for note in object_list %}
         <a href="details.html" class="note">
             <div class="note">
                 <div class="note_name">{{ note.title }}</div>
