@@ -10,9 +10,25 @@ from .models import Note
 #def home(request):
 #    return render(request, 'web/home.html', {})
 
+from django.views.generic import ListView
+from .models import Note
+
 class NoteView(ListView):
     model = Note
     template_name = 'web/home.html'
+    context_object_name = 'notes'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        priority_order = self.request.GET.get('priority', 'descending')
+
+        if priority_order == 'ascending':
+            queryset = queryset.order_by('priority__weight')
+        else:
+            queryset = queryset.order_by('-priority__weight')
+
+        return queryset
+
 
 
 class NoteDetailView(DetailView):

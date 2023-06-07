@@ -18,16 +18,16 @@
     <div class="settings">
         <div class="add_note"><a href="/add" >Dodaj notatkę</a></div>
         <div class="priority">
-                PRIORYTET
+            PRIORYTET
             <select name="priority" id="priority" class="wybor">
-                <option value="descending">Malejąco</option>
-                <option value="ascending">Rosnąco</option>
+                <option value="descending" {% if request.GET.priority != 'ascending' %}selected{% endif %}>Malejąco</option>
+                <option value="ascending" {% if request.GET.priority == 'ascending' %}selected{% endif %}>Rosnąco</option>
             </select>
         </div>
     </div>
     <main>
         {% for note in object_list %}
-            <a href="/details/{{ note.id }}" class="note">
+            <a href="/details/{{ note.id }}?priority={{ request.GET.priority }}" class="note">
                 <div class="note">
                     <div class="note_name">{{ note.title }}</div>
                     <div class="note_text">{{ note.content }}</div>
@@ -44,5 +44,6 @@
             </div>
         </a>
     </main>
+    <script src="{% static "js/script.js" %}"></script>
 </body>
 </html>
