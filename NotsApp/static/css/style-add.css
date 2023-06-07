@@ -113,6 +113,18 @@ input{
     margin: 10px auto;
     width: fit-content;
 }
+.cancel{
+    background-color: #2b2b2b;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+    font-size: 2em;
+    border: 0px;
+    padding: 10px 15px;
+    transition: background-color 100ms;
+}
+.cancel:hover{
+    background-color: #3d3d3d;
+}
 button{
     background-color: #2b2b2b;
     /*margin: 10px auto auto auto;*/
@@ -121,7 +133,6 @@ button{
     border: 0px;
     padding: 10px 15px;
     transition: background-color 100ms;
-
 }
 button:hover{
     background-color: #3d3d3d;

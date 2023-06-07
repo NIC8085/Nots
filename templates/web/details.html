@@ -13,7 +13,7 @@
     <nav>
         <a href=".." class="name">Nots<i class="bi bi-journal-text"></i></a>
         <!--  <h1 class="link"><a>Stona główna</a></h1>  -->
-        <i class="bi bi-brightness-high"></i>
+        <!--  <i class="bi bi-brightness-high"></i>  -->
     </nav>
     <main>
         <div class="title_priority">
@@ -23,12 +23,13 @@
         <div class="date_author">
             Created:
             <div class="date">{{ note.created }}</div>
-            <div class="author">{{ note.author }}</div>
+            <div class="author">by: {{ note.author }}</div>
         </div>
         <div class="text">{{ note.content }}</div>
         <div class="add">
-            <a href="/edit/{{ note.id }}" >Edytuj</a>
+            <a href="/edit/{{ note.id }}" >Edit</a>
         </div>
+        <a href=".." class="cancel" style="color: #ff5858">Cancel</a>
     </main>
 </body>
 </html>

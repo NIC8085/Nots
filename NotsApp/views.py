@@ -30,7 +30,6 @@ class NoteView(ListView):
         return queryset
 
 
-
 class NoteDetailView(DetailView):
     model = Note
     template_name = 'web/details.html'

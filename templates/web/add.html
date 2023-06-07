@@ -13,38 +13,34 @@
     <nav>
         <a href=".." class="name">Nots<i class="bi bi-journal-text"></i></a>
         <!--  <h1 class="link"><a>Stona główna</a></h1>  -->
-        <i class="bi bi-brightness-high"></i>
+        <!--  <i class="bi bi-brightness-high"></i>  -->
     </nav>
     <main>
         <form method="post" class="form-group">
             {% csrf_token %}
             <div class="title_container">
-                <h1>Tytuł</h1>
+                <h1>Title</h1>
                 {{ form.title }}
             </div>
             <div class="author_container">
-                <h1>Autor</h1>
+                <h1>Author</h1>
                 {{ form.author }}
             </div>
             <div class="options">
 
                 <div class="priority_container">
-                    Priorytet
+                    Priority
                     {{ form.priority }}
                 </div>
             </div>
             <div class="text_containter">
                 {{ form.content }}
             </div>
-
-
             <div class="add_container">
-                <button class="btn btn-primary">Wyślij</button>
+                <button>Add</button>
+                <a href=".." class="cancel" style="color: #ff5858">Cancel</a>
             </div>
-
         </form>
     </main>
-
-
 </body>
 </html>

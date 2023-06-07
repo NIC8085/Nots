@@ -50,7 +50,7 @@ nav>h1{
     font-size: x-large;
     background-color: #2e2e2e;
     padding: 8px;
-    width: 150px;
+    width: fit-content;
     margin: 10px 0px 0px 10px;
     border-radius: 6px;
     transition: background-color 100ms;
@@ -108,9 +108,9 @@ main{
     word-wrap: break-word;
 }
 .note_text{
-    padding: 9px 15px 0px;
+    padding: 0px 15px 0px;
     color: rgb(214, 214, 214);
-    height: auto;
+    height: 228px;
     width: 220px;
     word-wrap: break-word;
     overflow: hidden;
@@ -127,15 +127,16 @@ main{
 }
 .note_date{
     font-size: medium;
-    padding: 15px 10px 5px 0px;
+    padding: 0px 10px 5px 0px;
     font-weight: bold;
     color: rgb(214, 214, 214);
     margin: auto 10px 10px auto;
 }
 .note_add{
     font-size: 50px;
-    margin-top: 30px;
+    margin-top: 55px;
     text-align: center;
+    width: 100%;
 }
 .bi-plus-square{
     font-size: 80px;
