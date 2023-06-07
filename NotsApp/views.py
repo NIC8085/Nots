@@ -13,3 +13,8 @@ from .models import Note
 class NoteView(ListView):
     model = Note
     template_name = 'web/home.html'
+
+
+class NoteDetailView(DetailView):
+    model = Note
+    template_name = 'web/details.html'

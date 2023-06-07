@@ -17,9 +17,9 @@
     </nav>
     {% block settings %}{% endblock %}
     <main>
-        {% block note %}{% endblock %}
+        {#% block note %#}{#% endblock %#}
         {% for note in object_list %}
-            <a href="details.html" class="note">
+            <a href="{% url 'details' post.pk %}" class="note">
                 <div class="note">
                     <div class="note_name">{{ note.title }}</div>
                     <div class="note_text">{{ note.content }}</div>
