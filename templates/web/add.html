@@ -16,31 +16,10 @@
         <i class="bi bi-brightness-high"></i>
     </nav>
     <main>
-        <form action="add.html" method="post">
-            <div class="title_container">
-                <h1>Tytuł</h1>
-                <input type="text" name="title" id="" class="input title" maxlength="30">
-            </div>
-            <div class="options">
-                <div class="priority_container">
-                    Ważność
-                    <select name="priority" id="priority" class="priority">
-                        <option value="6">Priorytet</option>
-                        <option value="5">Bardzo ważne</option>
-                        <option value="4">Ważne</option>
-                        <option value="3">Średnio ważne</option>
-                        <option value="2">Mało ważne</option>
-                        <option value="1">Nieważne</option>
-                        <option value="0" selected="selected">Brak</option>
-                    </select>
-                </div>
-            </div>
-            <div class="text_containter">
-                <textarea name="text" id="" cols="30" rows="10" class="text"></textarea>
-            </div>
-            <div class="add_container">
-                <input type="submit" value="Dodaj" class="input add">
-            </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Wyślij</button>
         </form>
     </main>
 
