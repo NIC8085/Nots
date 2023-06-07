@@ -18,3 +18,8 @@ class NoteView(ListView):
 class NoteDetailView(DetailView):
     model = Note
     template_name = 'web/details.html'
+
+
+class NoteEditView(DetailView):
+    model = Note
+    template_name = 'web/edit.html'

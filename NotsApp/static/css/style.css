@@ -104,7 +104,7 @@ main{
     font-size: larger;
     font-weight: bold;
     height: auto;
-    width: 172px;
+    width: 220px;
     word-wrap: break-word;
 }
 .note_text{
@@ -120,17 +120,17 @@ main{
     
 }
 .note_priority{
-    padding: 0px 10px 5px;
-    margin: auto 0px 10px auto;
+    padding: 0 0 5px 10px;
+    margin: auto 0 10px 10px;
     font-size: medium;
     
 }
 .note_date{
     font-size: medium;
-    padding: 15px 10px 5px;
+    padding: 15px 10px 5px 0px;
     font-weight: bold;
     color: rgb(214, 214, 214);
-    margin: auto 0px 10px auto;
+    margin: auto 10px 10px auto;
 }
 .note_add{
     font-size: 50px;

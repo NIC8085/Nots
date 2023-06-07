@@ -11,15 +11,24 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="name">Nots<i class="bi bi-journal-text"></i></a>
+        <a href=".." class="name">Nots<i class="bi bi-journal-text"></i></a>
         <!--  <h1 class="link"><a>Stona główna</a></h1>  -->
         <i class="bi bi-brightness-high"></i>
     </nav>
-    {% block settings %}{% endblock %}
+    <div class="settings">
+        <div class="add_note"><a href="add.html" >Dodaj notatkę</a></div>
+        <div class="priority">
+                PRIORYTET
+            <select name="priority" id="priority" class="wybor">
+                <option value="brak">Brak</option>
+                <option value="ascending">Rosnąco</option>
+                <option value="descending">Malejąco</option>
+            </select>
+        </div>
+    </div>
     <main>
-        {#% block note %#}{#% endblock %#}
         {% for note in object_list %}
-            <a href="{% url 'details' post.pk %}" class="note">
+            <a href="/details/{{ note.id }}" class="note">
                 <div class="note">
                     <div class="note_name">{{ note.title }}</div>
                     <div class="note_text">{{ note.content }}</div>

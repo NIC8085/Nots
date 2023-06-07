@@ -6,9 +6,9 @@ from .models import Note, Priority
 
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ('title', 'priority', 'author', 'created', 'updated')
+    list_display = ('title', 'priority', 'author', 'created')
     search_fields = ('title', 'content')
-    ordering = ('priority', 'updated', 'created', 'title')
+    ordering = ('priority', 'created', 'title')
 
 
 @admin.register(Priority)

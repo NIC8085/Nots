@@ -15,11 +15,11 @@ class Priority(models.Model):
     def __str__(self):
         return self.title
 
+
 class Note(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=20)
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
-    updated = models.DateField(auto_now=True)
     author = models.CharField(max_length=50)
     priority = models.ForeignKey(Priority, on_delete=models.CASCADE, related_name='notes')
 

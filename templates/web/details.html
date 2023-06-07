@@ -1,15 +1,34 @@
 {% load static %}
-{% block details %}
-    <div class="title_priority">
-        <div class="title"><h1>{{ post.title }}</h1></div>
-        <div class="priority">{{ post.priority.title }}</div>
-    </div>
-    <div class="date_author">
-        <div class="date">{{ post.created }}</div>
-        <div class="author">{{ post.author }}</div>
-    </div>
-    <div class="text">{{ post.content }}</div>
-    <div class="add">
-        <a href="edit.html" >Edytuj</a>
-    </div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nots</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static "css/style-details.css" %}">
+</head>
+<body>
+    <nav>
+        <a href=".." class="name">Nots<i class="bi bi-journal-text"></i></a>
+        <!--  <h1 class="link"><a>Stona główna</a></h1>  -->
+        <i class="bi bi-brightness-high"></i>
+    </nav>
+    <main>
+        <div class="title_priority">
+            <div class="title"><h1>{{ note.title }}</h1></div>
+            <div class="priority">{{ note.priority.title }}</div>
+        </div> 
+        <div class="date_author">
+            Created:
+            <div class="date">{{ note.created }}</div>
+            <div class="author">{{ note.author }}</div>
+        </div>
+        <div class="text">{{ note.content }}</div>
+        <div class="add">
+            <a href="edit.html" >Edytuj</a>
+        </div>
+    </main>
+</body>
+</html>
