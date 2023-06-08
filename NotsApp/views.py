@@ -1,23 +1,27 @@
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Note
+from django.core.paginator import Paginator, EmptyPage
 
 
 class NoteView(ListView):
     model = Note
     template_name = 'web/home.html'
-    context_object_name = 'notes'
+    paginate_by = 10  # Określa ilość notatek na stronie
 
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        priority_order = self.request.GET.get('priority', 'descending')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        notes = context['object_list']
+        paginator = Paginator(notes, self.paginate_by)
+        page_number = self.request.GET.get('page')
 
-        if priority_order == 'ascending':
-            queryset = queryset.order_by('priority__weight')
-        else:
-            queryset = queryset.order_by('-priority__weight')
+        try:
+            page_obj = paginator.get_page(page_number)
+        except EmptyPage:
+            page_obj = paginator.get_page(1)  # Wyświetl pierwszą stronę, jeśli numer strony jest nieprawidłowy
 
-        return queryset
+        context['page_obj'] = page_obj
+        return context
 
 
 class NoteDetailView(DetailView):

@@ -45,6 +45,8 @@ nav>h1{
 .settings{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .add_note{
     font-size: x-large;
@@ -80,10 +82,10 @@ nav>h1{
     cursor: pointer;
 }
 main{
-    padding-top: 3%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    width: 100%;
 }
 .note{
     background-color: #2c2c2c;
@@ -143,5 +145,182 @@ main{
     margin: 0px auto 30px auto;
     color: #ffbb00;
 }
-
-/*{}*/
+/*------------------------------------------*/
+.main{
+    padding: 10% 10% 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.title_priority{
+    width: 100%;
+    margin-right: auto;
+}
+.title{
+    font-size: larger;
+}
+.title>h1{
+    margin: 0px;
+    word-wrap: break-word;
+}
+.priority_detail{
+    /*
+    color: #ff0000;
+    color: #ffa500;
+    color: #ffee00;
+    color: #39d500;
+    color: #0099ff;
+    color: #4f4f4f;
+    */
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.date_author{
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+.date{
+    margin-bottom: 10px;
+}
+.author{
+    word-wrap: break-word;
+}
+.text{
+    margin-top: 40px;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: large
+}
+.add{
+    font-size: x-large;
+    background-color: #2e2e2e;
+    padding: 10px 15px;
+    width: 70px;
+    margin: 10px 5px;
+    border-radius: 6px;
+    transition: background-color 100ms;
+    text-align: center;
+}
+.add:hover{
+    background-color: #3d3d3d;
+}
+.cancel{
+    font-size: x-large;
+    background-color: #2e2e2e;
+    padding: 10px 15px;
+    width: auto;
+    margin: 10px 5px;
+    border-radius: 6px;
+    transition: background-color 100ms;
+    text-align: center;
+}
+.cancel:hover{
+    background-color: #3d3d3d;
+}
+/*-------------------------------------------*/
+.edit_form{
+    margin: 0px 10%;
+    width: 100%;
+    height: auto;
+}
+.edit_title>h1{
+    text-align: center;
+}
+.edit_title>input{
+    background-color: #2b2b2b;
+    border: 1px solid #767676;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+}
+.edit_author>input{
+    background-color: #2b2b2b;
+    border: 1px solid #767676;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+}
+.edit_form>.edit_title{
+    width: fit-content;
+    margin: 50px auto 0px auto;
+}
+.edit_title>input{
+    height: 30px;
+    width: 300px;
+    font-size: large;
+}
+.edit_author{
+    width: fit-content;
+    margin: 3% auto 0px auto;
+}
+.edit_author>h1{
+    text-align: center;
+}
+.edit_author>input{
+    height: 30px;
+    width: 300px;
+    font-size: large;
+}
+.edit_options{
+    margin: 10px 0px;
+}
+.edit_priority{
+    margin: 0px auto;
+    color: #9d9d9d;
+    width: fit-content;
+}
+.edit_priority>select{
+    font-size: larger;
+    border-radius: 6px;
+    height: 10px;
+    background-color: #2e2e2e;
+    border: 0px;
+    height: auto;
+    padding: 3px;
+    width: auto;
+    border-radius: 6px;
+    transition: background-color 100ms;
+}
+.edit_priority>select:hover{
+    background-color: #3d3d3d;
+}
+.edit_text{
+    width: 100%;
+}
+.edit_text>textarea{
+    width: 100%;
+    height: 500px;
+    margin: 0px auto 0px auto;
+    background-color: #2e2e2e;
+    font-size: large;
+    border-radius: 5px;
+}
+.edit_add{
+    margin: 10px auto;
+    width: fit-content;
+}
+.edit_cancel{
+    background-color: #2b2b2b;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+    font-size: 2em;
+    border: 0px;
+    padding: 10px 15px;
+    transition: background-color 100ms;
+}
+.edit_cancel:hover{
+    background-color: #3d3d3d;
+}
+.edit_add>button{
+    background-color: #2b2b2b;
+    /*margin: 10px auto auto auto;*/
+    border-radius: 5px;
+    font-size: 2em;
+    border: 0px;
+    padding: 10px 15px;
+    transition: background-color 100ms;
+}
+.edit_add>button:hover{
+    background-color: #3d3d3d;
+}
+/*-------------------------------------------*/
