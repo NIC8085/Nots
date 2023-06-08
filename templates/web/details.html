@@ -1,19 +1,21 @@
 {% extends 'web/base.html' %}
 {% block content %}
-    <div class="main">
-        <div class="title_priority">
-            <div class="title"><h1>{{ note.title }}</h1></div>
-            <div class="priority_detail" style="color: {{ note.priority.color }};">{{ note.priority.title }}</div>
+    <main>
+        <div class="main">
+            <div class="title_priority">
+                <div class="title"><h1>{{ note.title }}</h1></div>
+                <div class="priority_detail" style="color: {{ note.priority.color }};">{{ note.priority.title }}</div>
+            </div>
+            <div class="date_author">
+                Created:
+                <div class="date">{{ note.created }}</div>
+                <div class="author">by: {{ note.author }}</div>
+            </div>
+            <div class="text">{{ note.content }}</div>
+            <div class="add">
+                <a href="/edit/{{ note.id }}" >Edit</a>
+            </div>
+            <a href=".." class="cancel" style="color: #ff5858">Back</a>
         </div>
-        <div class="date_author">
-            Created:
-            <div class="date">{{ note.created }}</div>
-            <div class="author">by: {{ note.author }}</div>
-        </div>
-        <div class="text">{{ note.content }}</div>
-        <div class="add">
-            <a href="/edit/{{ note.id }}" >Edit</a>
-        </div>
-        <a href=".." class="cancel" style="color: #ff5858">Back</a>
-    </div>
+    </main>
 {% endblock %}

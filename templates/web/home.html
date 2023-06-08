@@ -1,19 +1,20 @@
 {% extends "web/base.html" %}
 {% load static %}
 
-
 {% block content %}
-    <div class="settings">
-        <div class="add_note"><a href="/add" >Add note</a></div>
-        <div class="priority">
-            PRIORITY
-            <select name="priority" id="priority" class="wybor">
-                <option value="descending" {% if request.GET.priority != 'ascending' %}selected{% endif %}>Descending</option>
-                <option value="ascending" {% if request.GET.priority == 'ascending' %}selected{% endif %}>Ascending</option>
-            </select>
+    <main>
+        <div class="settings">
+            <div class="add_note"><a href="/add">Add note</a></div>
+            <div class="priority">
+                PRIORITY
+                <select name="priority" id="priority" class="wybor">
+                    <option value="descending" {% if request.GET.priority != 'ascending' %}selected{% endif %}>Descending</option>
+                    <option value="ascending" {% if request.GET.priority == 'ascending' %}selected{% endif %}>Ascending</option>
+
+                </select>
+            </div>
         </div>
-    </div>
-    {% for note in object_list %}
+        {% for note in page_obj %}
             <a href="/details/{{ note.id }}" class="note">
                 <div class="note">
                     <div class="note_name">{{ note.title }}</div>
@@ -22,11 +23,16 @@
                     <div class="note_date">{{ note.created }}</div>
                 </div>
             </a>
-    {% endfor %}
-    <a href="/add" class="note">
-        <div class="note">
-            <div class="note_add">Add note</div>
-            <i class="bi bi-plus-square"></i>
-        </div>
-    </a>
+        {% endfor %}
+        <a href="/add" class="note">
+            <div class="note">
+                <div class="note_add">Add note</div>
+                <i class="bi bi-plus-square"></i>
+            </div>
+        </a>
+        {% include "web/pagination.html" with page=page_obj %}
+    </main>
+
+    <script src="{% static "js/script.js" %}"></script>
+
 {% endblock %}

@@ -324,3 +324,26 @@ main{
     background-color: #3d3d3d;
 }
 /*-------------------------------------------*/
+.pagination{
+    margin: 0;
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    height: fit-content;
+}
+.pages{
+    margin: 0 auto;
+    width: fit-content;
+    font-size: x-large;
+}
+.paging{
+    padding: 5px;
+    border: 0px solid;
+    background-color: #4f4f4f;
+    border-radius: 6px;
+    transition: background-color 100ms;
+}
+.paging:hover{
+    background-color: #595959;
+
+}

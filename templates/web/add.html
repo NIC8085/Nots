@@ -1,27 +1,29 @@
 {% extends 'web/base.html' %}
 {% block content %}
-    <form method="post" class="edit_form">
-        {% csrf_token %}
-        <div class="edit_title">
-            <h1>Title</h1>
-            {{ form.title }}
-        </div>
-        <div class="edit_author">
-            <h1>Author</h1>
-            {{ form.author }}
-        </div>
-        <div class="edit_options">
-            <div class="edit_priority">
-                Priority
-                {{ form.priority }}
+    <main>
+        <form method="post" class="edit_form">
+            {% csrf_token %}
+            <div class="edit_title">
+                <h1>Title</h1>
+                {{ form.title }}
             </div>
-        </div>
-        <div class="edit_text">
-            {{ form.content }}
-        </div>
-        <div class="edit_add">
-            <button>Add</button>
-            <a href="/details/{{ note.id }}" class="edit_cancel" style="color: #ff5858">Cancel</a>
-        </div>
-    </form>
+            <div class="edit_author">
+                <h1>Author</h1>
+                {{ form.author }}
+            </div>
+            <div class="edit_options">
+                <div class="edit_priority">
+                    Priority
+                    {{ form.priority }}
+                </div>
+            </div>
+            <div class="edit_text">
+                {{ form.content }}
+            </div>
+            <div class="edit_add">
+                <button>Add</button>
+                <a href=".." class="edit_cancel" style="color: #ff5858">Back</a>
+            </div>
+        </form>
+    </main>
 {% endblock %}
