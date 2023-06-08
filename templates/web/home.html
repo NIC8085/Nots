@@ -27,7 +27,7 @@
     </div>
     <main>
         {% for note in object_list %}
-            <a href="/details/{{ note.id }}?priority={{ request.GET.priority }}" class="note">
+            <a href="/details/{{ note.id }}" class="note">
                 <div class="note">
                     <div class="note_name">{{ note.title }}</div>
                     <div class="note_text">{{ note.content }}</div>

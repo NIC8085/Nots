@@ -1,17 +1,7 @@
-from django.shortcuts import render, redirect
-
-# Create your views here.
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
-
 from .models import Note
 
-
-#def home(request):
-#    return render(request, 'web/home.html', {})
-
-from django.views.generic import ListView
-from .models import Note
 
 class NoteView(ListView):
     model = Note
@@ -43,6 +33,7 @@ class NoteEditView(UpdateView):
     def form_valid(self, form):
         note = form.save()
         return redirect('NotsApp:details', pk=note.pk)
+
 
 class NoteAddView(CreateView):
     model = Note
