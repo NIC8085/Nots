@@ -40,6 +40,9 @@ class NoteEditView(UpdateView):
     template_name = 'web/edit.html'
     fields = '__all__'
 
+    def form_valid(self, form):
+        note = form.save()
+        return redirect('NotsApp:details', pk=note.pk)
 
 class NoteAddView(CreateView):
     model = Note
@@ -47,6 +50,5 @@ class NoteAddView(CreateView):
     fields = '__all__'
 
     def form_valid(self, form):
-        # kod przetwarzania formularza
         note = form.save()
         return redirect('NotsApp:details', pk=note.pk)
